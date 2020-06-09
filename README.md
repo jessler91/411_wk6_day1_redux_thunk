@@ -28,6 +28,8 @@ Today we are going to create a mock-import utility that we can use in our cars a
 
 * Once that is done go to the `Router` file and switch the import so that it references "containers/Import" instead of "components/Import".
 
+<!-- Done to here-->
+
 * Now we can go back to the "Import" component and write our map function. Inside of the `<TableBody>` tags we need to write `{ props.makes.map()... }`. You should know that part by now. Return a `TableRow` with three `TableCell`s in it. Reference the data from the API to see what you should put where. For example, each make has a "MakeId" and a "MakeName" so you will be using those to correspond to the Id and Make columns. Leave the actions column alone for now.
 
 * We've got the setup in our component and we just need to tie the import button in so that it makes the fetch call when it's clicked. First we need to add `mapDispatchToProps` in our container. Let's navigate to the "Import" container and do that now. Map a property called "fetchMakes" to `() => dispatch(fetchMakes())` and remember to import the "fetchMakes" action at the top of the file.
@@ -39,6 +41,8 @@ Today we are going to create a mock-import utility that we can use in our cars a
 * If the table is being populate it's time for us to move onto the next step which is adding our actions. We are going to have a dropdown menu on under the actions column that allows us to "delete" that particular row. We are going to refence [menus](https://material-ui.com/components/menus/) from Material UI to do this. 
 
 * First `import { MoreVert } from '@material-ui/icons'` for the button and place the <MoreVert> component under the actions column. In the table. We are going to expand our menu using it's onClick method. Reference the code from the link above to figure out how to open/close the menu. Hint: Put the code for `<Menu>` outside of the table.
+
+<!-- completed to this point, JTE-->
 
 * Now that the menu is working we need to create the action to delete a certain row. Make a new action called `deleteMake`. It will take accept one argument that represents the index we want to delete. We've deleted rows from tables before so look back at previous homework assignments to write an appropriate action and reducer that handles this use case. Remember to also add your new action to the `mapDispatchToProps` function in your container.
 
