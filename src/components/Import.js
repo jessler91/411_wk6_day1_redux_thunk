@@ -64,7 +64,7 @@ const Import = (props) => {
                                             },
                                             }}
                                         >
-                                            <MenuItem  onClick={handleClose}>
+                                            <MenuItem  onClick={props.deleteMake}>
                                                 Delete
                                             </MenuItem>
                                             ))}

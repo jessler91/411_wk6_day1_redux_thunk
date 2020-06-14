@@ -27,3 +27,10 @@ export const fetchMakes = () => {
             })
     }
 }
+
+export const deleteMake = (id) => {
+    return {
+        type: 'DELETE_MAKE',
+        value: id
+    };
+};
